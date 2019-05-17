@@ -18,6 +18,10 @@ COPY fb.conf /etc/stunnel/conf.d/fb.conf
 COPY entrypoint.sh /entrypoint.sh
 COPY start.sh /start.sh
 
+RUN \
+    chmod +x /entrypoint.sh
+    && chmod +x /start.sh
+
 #EXPOSE 1935 
 
 ENTRYPOINT ["/entrypoint.sh"]
