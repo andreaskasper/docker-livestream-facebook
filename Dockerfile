@@ -16,11 +16,12 @@ ENV FACEBOOK_KEY="${FACEBOOK_KEY}"
 COPY stunnel.conf /etc/stunnel/stunnel.conf
 COPY fb.conf /etc/stunnel/conf.d/fb.conf
 COPY entrypoint.sh /entrypoint.sh
+COPY start.sh /start.sh
 
 #EXPOSE 1935 
 
 ENTRYPOINT ["/entrypoint.sh"]
-#CMD [""]
+CMD ["/start.sh"]
 
 
 #-e STUNNEL_SERVICE=rtmp \
