@@ -19,7 +19,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY start.sh /start.sh
 
 RUN \
-    chmod +x /entrypoint.sh
+    chmod +x /entrypoint.sh \
     && chmod +x /start.sh
 
 #EXPOSE 1935 
