@@ -25,7 +25,7 @@ RUN \
 #EXPOSE 1935 
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/start.sh"]
+CMD ["ffmpeg -re -i $INPUT -s 1280x720 -c:v libx264 -c:a aac -f flv rtmp://127.0.0.1:1936/rtmp/$FACEBOOK_KEY"]
 
 
 #-e STUNNEL_SERVICE=rtmp \
