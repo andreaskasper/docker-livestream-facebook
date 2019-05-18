@@ -16,11 +16,9 @@ ENV FACEBOOK_KEY="${FACEBOOK_KEY}"
 COPY stunnel.conf /etc/stunnel/stunnel.conf
 COPY fb.conf /etc/stunnel/conf.d/fb.conf
 COPY entrypoint.sh /entrypoint.sh
-COPY start.sh /start.sh
 
 RUN \
-    chmod +x /entrypoint.sh \
-    && chmod +x /start.sh
+    chmod +x /entrypoint.sh
 
 #EXPOSE 1935 
 
